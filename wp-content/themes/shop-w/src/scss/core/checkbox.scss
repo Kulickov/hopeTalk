@@ -1,0 +1,63 @@
+.woocommerce-form__input-checkbox.input-checkbox {
+    cursor: pointer;
+}
+
+.woocommerce-form__label-for-checkbox {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    padding: 0.3125em 0.625em 0.3125em 3.125em;
+    margin-bottom: 0.625em;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: $color_white;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+    }
+
+    &:before {
+        width: 1em;
+        height: 1em;
+        background-color: $color_white;
+        border: 1px solid $color_black;
+        left: 0.625em;
+        top: 54%;
+        margin-top: -0.6875em;
+        transition: 0.3s;
+    }
+
+    &:after {
+        width: 0.3125em;
+        height: 0.5em;
+        left: 0.9em;
+        top: 0.6em;
+        border-right: 0.2em solid $color_hopeLight;
+        border-bottom: 0.2em solid $color_hopeLight;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.woocommerce-form__input-checkbox.input-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.woocommerce-form__input-checkbox.input-checkbox:checked + label:after {
+    opacity: 1;
+}
+
+.woocommerce-form__input-checkbox.input-checkbox:checked + label:before {
+    background-color: $color_white;
+}
+
+.woocommerce-form__input-checkbox.input-checkbox:checked + label {
+    background-color: $color_white;
+}

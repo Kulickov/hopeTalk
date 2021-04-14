@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    @media (max-width: 767px) {}
+
+    &_visible {
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(#000, .1);
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0;
+    }
+
+    &__logo {
+        width: 8.9375em;
+        line-height: 0;
+        text-decoration: none;
+        color: $color_white;
+        font-weight: bold;
+        font-size: 1.8em;
+        text-transform: uppercase;
+
+        @media (max-width: 767px) {
+            width: 4em;
+        }
+    }
+
+    &__nav {
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-left: 0.4em;
+
+            > a {
+                text-decoration: none;
+                color: $color_white;
+            }
+        }
+    }
+
+    &__cart {
+        width: 2.25em;
+
+        &-wrapp {
+            position: relative;
+
+            &.empty {
+                position: relative;
+
+                &:hover {
+                    .header__cart-empty {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-img {}
+
+        &-counter {
+            position: absolute;
+            left: -0.5625em;
+            top: -1.5em;
+            background-color: $color_hopeLight;
+            border-radius: 50%;
+            line-height: 0;
+            padding: 0.7em 0.5em;
+            color: $color_white;
+            text-decoration: none;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
+        &-empty {
+            background-color: $color_white;
+            box-shadow: 0 0 0.3125em rgba(#000, .4);
+            border-radius: 0.3125em;
+            padding: 0.2em 0.5em;
+            font-size: 1em;
+            width: 11.25em;
+            position: absolute;
+            right: 0.5em;
+            bottom: -1.5em;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+    }
+}

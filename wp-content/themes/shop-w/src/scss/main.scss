@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&family=Montserrat:wght@300;400;700;900&display=swap');
+// @import 'core/fonts';
+@import 'core/reset';
+@import 'core/varibles';
+@import 'core/general';
+@import 'core/btn';
+@import 'core/header';
+@import './core/customPagePiling';
+@import './core/product';
+@import './core/breadcrumb';
+@import './core/product-grid';
+@import './core/checkout';
+@import './core/checkbox';
+@import './core/cart';
+@import './core/footer';
+@import './core/aboute-me';
+@import './core/testimonials';
+@import './core/orderPage';
+@import './core/burger';
+
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,38 @@
+.btn,
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    color: $color_white;
+    background-color: $color_black;
+    padding: 0.3em 1.4em;
+    transition: 0.3s;
+    font-family: $second_font-family;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+
+    &:hover {
+        background-color: #222;
+    }
+
+    &.woocommerce-MyAccount-downloads-file {
+        background-color: rgba($color_black, 0);
+        color: $color_hope;
+        text-decoration: underline;
+        padding: 0;
+        font-size: inherit;
+        margin-top: 6px;
+
+        @media (max-width: 767px) {
+            margin-top: 0;
+        }
+    }
+}
+
+// .button {
+//     width: 100%;
+//     padding: 1em;
+// }

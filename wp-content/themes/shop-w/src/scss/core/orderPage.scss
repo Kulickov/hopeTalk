@@ -1,0 +1,75 @@
+.woocommerce-table--order-downloads {
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    td {
+        padding: 0 5px;
+        @media (max-width: 767px) {
+            display: block;
+            clear: both;
+            text-align: right;
+            padding: 0.875em 0;
+        }
+    }
+
+    .download-expires {
+        display: none;
+    }
+
+    .download-remaining {
+        display: none;
+    }
+
+}
+
+.woocommerce-table.woocommerce-table--order-details.shop_table.order_details {
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    tr {
+        @media (max-width: 767px) {
+            display: block;
+            clear: both;
+        }
+    }
+
+    td {
+        padding: 0 5px;
+        @media (max-width: 767px) {
+            text-align: right;
+            padding: 0.875em 0;
+        }
+    }
+
+    tbody {
+        @media (max-width: 767px) {
+            tr {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    tfoot {
+        @media (max-width: 767px) {
+            tr {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                td,
+                th {
+                    width: 50%;
+                }
+
+                th {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

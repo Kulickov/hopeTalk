@@ -1,0 +1,119 @@
+.product-grid {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 4em;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:hover {
+            .product-grid__item-image img {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    &__item {
+        &-image {
+            width: 100%;
+            height: 26em;
+            position: relative;
+            overflow: hidden;
+
+            @media (max-width: 767px) {
+                height: 28em;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 1s;
+            }
+        }
+
+        &-bottom {
+            position: absolute;
+            width: 100%;
+            height: 65%;
+            bottom: 0;
+            left: 0;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            background: rgba(35, 35, 35, 0.5);
+            pointer-events: none;
+
+            .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .woocommerce-loop-product__title {
+                color: $color_white;
+                font-family: $main_font-family;
+                font-size: 1.7em;
+                font-weight: 800;
+                margin: 0;
+                text-align: center;
+                line-height: normal;
+            }
+
+            .price {
+                font-size: 1.7em;
+                font-weight: 800;
+                color: $color_hopeLight;
+                margin-top: 0.5em;
+            }
+
+            .btn {
+                font-family: $second_font-family;
+                font-weight: 300;
+                font-size: 1.2em;
+                position: relative;
+                line-height: normal;
+                background-color: transparent;
+                padding: 0;
+                color: $color_hopeLight;
+                pointer-events: visible;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 1px;
+                    background-color: $color_hopeLight;
+                }
+            }
+        }
+    }
+}
+
+.product__filter {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.woocommerce-notices-wrapper {
+    display: none;
+}
